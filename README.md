@@ -1,6 +1,6 @@
 # Frontend Mentor - Testimonials grid section solution
 
-## Vite + React + Sass + Framer motion
+## Vite + React + Sass + Framer motion + React loading skeleton
 
 This is a solution to the [Testimonials grid section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7).
 
@@ -28,7 +28,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![solution-preview-desktop](/design/solution-preview-desktop.png)
+
+![solution-preview-mobile](/design/solution-preview-mobile.png)
+
 
 ### Links
 
@@ -37,24 +40,34 @@ Users should be able to:
 
 ## My process
 
+- Created new Vite + React project.
+- Installed Sass as a dependency.
+- Initialized git repo and pushed project to GitHub.
+- Created general styles for the app.
+- Deployed project to live site in Netlify.
+- Built page with grid layout
+- Added animations using Framer motion to cards
+- Optimized page layout for different screen sizes
+- Created Skeleton loading effect for cards.
+
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
 - CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Sass/Scss](https://sass-lang.com) - CSS preprocessor
+- [Framer motion](https://www.framer.com/motion/) - React animation library
+- [React Loading Skeleton](https://www.npmjs.com/package/react-loading-skeleton) React library for creating skeleton UI loaders
 
 ### What I learned
 
-### Useful resources
+CSS grid is something I always find myself running from in project. This challenge presented the perfect oppotunity to face it head on. I was able to understand more about how the grid works and how to create complex but responsive grid layouts.
+
+I even decided to take it further and decided to learn through this project, how to incoperate Framer motion and React Loading Skeleton for animations and skeleton loading effects respectively in my react applications.
 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@Sarah-okolo](https://www.frontendmentor.io/profile/Sarah-okolo)
+- Twitter - [@SahraOke](https://www.twitter.com/SahraOke)
