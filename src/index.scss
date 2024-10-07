@@ -1,4 +1,4 @@
-@import url('https://fonts.google.com/specimen/Barlow+Semi+Condensed');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 // Primary colors
 $Moderate-violet: hsl(263, 55%, 52%);
@@ -10,14 +10,11 @@ $White: hsl(0, 0%, 100%);
 $Light-gray: hsl(0, 0%, 81%);
 $Light-grayish-blue: hsl(210, 46%, 95%);
 
-// Note for text colors:
-// 1. "Verified Graduate" has the same color as the person's name with 50% opacity
-// 2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
-
 // Typography
 $F-size: 13px;
-$F-family: 'Barlow Semi Condensed';
+$F-family: 'Barlow Semi Condensed', sans-serif;
 
+// TODO: Create skeleton loader
 
 :root {
   font-family: $F-family;
@@ -37,6 +34,92 @@ $F-family: 'Barlow Semi Condensed';
 }
 
 body {
-  background-color: null;
-  color: null;
+  background-color: $Light-grayish-blue;
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+#app {
+  width: 90%;
+  max-width: 1250px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 50px auto;
+  padding: 10px;
+}
+
+@mixin card-styles($bg, $colr) {
+  color: $Light-gray;
+  background-color: $bg;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 35px 30px;
+  border-radius: 5px;
+  box-shadow: 0 ;
+  display: grid;
+  gap: 15px;
+  width: 100%;
+  // align-self: start; /* Prevents stretching to sibling height */
+
+  .name {
+    color: $colr
+  }
+  .heading {
+    color: $colr
+  }
+}
+
+.card.style1 {
+  @include card-styles($Moderate-violet, $White);
+  background-image: url('/images/bg-pattern-quotation.svg');
+  background-position: calc(100% - 100px) 0;
+  background-size: 12rem;
+  grid-column: span 2;
+}
+
+.card.style2 {
+  @include card-styles($Very-dark-grayish-blue, $White);
+}
+
+.card.style3{
+  @include card-styles($White, $Very-dark-grayish-blue);
+}
+
+.card.style4 {
+  @include card-styles($Very-dark-blackish-blue, $White);
+  grid-column: span 2;
+}
+
+.card.style5 {
+  @include card-styles($White, $Very-dark-grayish-blue);
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
+
+.poster {
+  display: flex;
+  gap: 15px;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  aspect-ratio: 1/1;
+  border: 2px solid green;
+  border-radius: 50%;
+}
+
+.name {
+  letter-spacing: .9px;
+  margin-bottom: 7px;
+  font-weight: 600;
+  font-size: 1.1;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
