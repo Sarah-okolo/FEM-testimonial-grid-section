@@ -36,7 +36,7 @@ function App() {
         <SkeletonTheme baseColor="hsl(220, 7%, 77%)" highlightColor="#666" borderRadius={'.5rem'}>
           {
             // display skeleton loader before content is ready to be displayed
-            !delay ? (
+            delay ? (
               <div className="wrapper sk-wrapper">
                 {
                   Array.from({ length: 5 }).map((_, i) => (
